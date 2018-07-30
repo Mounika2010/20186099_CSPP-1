@@ -16,13 +16,13 @@ Pseudo code
 			2. Add 1 to j
 		 iv. if freqcount > max:
 			1. Set max = freqcount
-			2. Set maxvalue = temp
+			2. Set maxvalue = tempo
 		  v. Add 1 to i
 
 	f. if size == 1:
 		i. Output "None"
 	g. else:
-		i. if max == 1:
+		i. if max == 1 :
 			1. Output "None"
 		ii. Else:
 			1. Output maxvaluue
