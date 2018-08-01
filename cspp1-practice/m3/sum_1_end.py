@@ -8,3 +8,7 @@ while i <= 6:
     SUM = SUM+i
     i += 1
 print(SUM)
+
+for C in range(1, 6, 1):
+    SUM = SUM+i
+    i += 1
