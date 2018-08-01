@@ -2,13 +2,13 @@
 @author : Mounika2010
 This program compares two variables
 '''
-varA = 8
-varB = 7
-if (type(varA)== str or type(varB)== str):
+VAR_A = 8
+VAR_B = 7
+if (isinstance(VAR_A, str) or isinstance(VAR_B, str)):
     print("string involved")
-elif varA>varB:
+elif VAR_A > VAR_B:
     print("bigger")
-elif varA==varB:
+elif VAR_A == VAR_B:
     print("equal")
-elif varA<varB:
+else:
     print("smaller")
