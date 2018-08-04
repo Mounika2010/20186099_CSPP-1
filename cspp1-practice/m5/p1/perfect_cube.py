@@ -19,15 +19,17 @@ def main():
     eplsilon = 0.01
     inc = 1
     guess = 0
+
     while guess <= cube_num:
         if abs(guess**3 -cube_num) < eplsilon:
             break
         else:
             guess += inc
+
     if abs(guess**3 - cube_num) >= eplsilon:
         print(str(cube_num) + "is not a perfect cube")
     else:
-        print(str(cube_num) + " is a perfect cube")
+        print(str(cube_num) + "is a perfect cube")
     # watch out for the data type of value stored in s
     # your code starts here
 
