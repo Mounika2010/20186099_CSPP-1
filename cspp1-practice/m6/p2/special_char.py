@@ -13,8 +13,9 @@ def main():
     temp = ""
     for char in str_input:
     	if char in "!@#$%^&*":
+    		temp = count + " "
     		count += 1
-    	temp = (count + " ")	
+    print(temp)		
     	
 if __name__ == "__main__":
     main()

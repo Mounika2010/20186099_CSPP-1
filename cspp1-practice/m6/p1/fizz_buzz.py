@@ -11,18 +11,15 @@ def main():
     '''
     n_input = int(input())
     i = 1
-    while i <= n_input:
-        if (i%3) == 0 and (i%5) == 0:
-            print("FizzBuzz")
+    for i in range(n_input):
+        print(i)
         if (i%3) == 0:
             print("Fizz")
         if(i%5) == 0:
             print("Buzz")
+        if (i%3) == 0 and (i%5) == 0:
+            print("FizzBuzz")
         i += 1
-    print(i)
-
-
-
 
 if __name__ == "__main__":
     main()
