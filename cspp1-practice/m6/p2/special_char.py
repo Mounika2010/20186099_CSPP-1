@@ -11,11 +11,11 @@ def main():
     len_str = len(str_input)
     count = 0
     temp = ""
-    for char in str_input:
-    	if char in "!@#$%^&*":
-    		temp = count + " "
-    		count += 1
-    print(temp)		
-    	
+    for char in len(str_input):
+        if char in "!@#$%^&*":
+            temp = count + " "
+            count += 1
+    print(temp)     
+        
 if __name__ == "__main__":
     main()
