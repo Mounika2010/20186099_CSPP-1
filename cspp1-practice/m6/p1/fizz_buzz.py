@@ -9,14 +9,14 @@ def main():
     @author : Mounika2010
     Read number from the input, store it in variable num.
     '''
-    n = int(input())
+    n_input = int(input())
     i = 1
-    for i in n:
-        if( (i%3) == 0 and (i%5) == 0):
+    while i <= n_input:
+        if (i%3) == 0 and (i%5) == 0:
             print("FizzBuzz")
-        if((i%3) == 0):
+        if (i%3) == 0:
             print("Fizz")
-        if((i%5) == 0):
+        if(i%5) == 0:
             print("Buzz")
         i += 1
     print(i)
