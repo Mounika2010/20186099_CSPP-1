@@ -32,7 +32,7 @@ def main():
             i += 1
             sub_str += input_str[i]
         if len(sub_str) > len(temp_str):
-            temp_str = sub_str
+             temp_str = sub_str
     print(temp_str)
     # the input string is in s
     # remove pass and start your code here

@@ -7,4 +7,3 @@ count = 0
 temp1 = ""
 for i in s:
 	
-

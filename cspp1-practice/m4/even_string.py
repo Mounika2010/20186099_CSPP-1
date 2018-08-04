@@ -5,7 +5,7 @@ This program prints reverse of even characters of a string
 S = input()
 LENGTH = len(S)
 COUNT_STR = 0
-i = 0
+i = 2
 TEMP1 = ""
 TEMP2 = ""
 for i in S:
