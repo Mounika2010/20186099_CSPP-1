@@ -37,7 +37,9 @@ def payingdebtoffin_ayear(balance_num, annual_interestrate, monthly_paymentrate)
     i = 0
     while i < 12:
         balance_num = balance_num - (monthly_paymentrate * balance_num)
-        balance_num = balance_num - (annual_interestrate / 12) * balance_num
+        balance_num = balance_num - annual_interestrate / 12 * balance_num
+        monthly_unpaidbal = balance_num - min_monthlypayment
+        balance_num = monthly_unpaidbal + (annual_interestrate * monthly_unpaidbal)
         i += 1
     return round(balance_num, 2)
 
