@@ -39,15 +39,15 @@ def payingdebtoffinayear(balance_num, annual_interestrate):
     low_i = init_balance/12
     up_i = (init_balance* (1+ moninterest_rate)**12)/12.0
     epsilon = 0.03
-    balance_in = init_balance
-    while abs(balance_in) > epsilon:
+    balance_num = init_balance
+    while abs(balance_num) > epsilon:
         mon_payrate = (up_i+low_i)/2
-        for _ in range(12):
-            ans_i = balance_in - mon_payrate
-            balance_in = ans_i + (ans_i * moninterest_rate)
-        if balance_in > epsilon:
+        for i in range(12):
+            ans_i = balance_num - mon_payrate
+            balance_num = ans_i + (ans_i * moninterest_rate)
+        if balance_num > epsilon:
             low_i = mon_payrate
-        elif balance_in < -epsilon:
+        elif balance_num < -epsilon:
             up_i = mon_payrate
         else:
             break
