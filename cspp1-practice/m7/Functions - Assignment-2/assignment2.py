@@ -30,28 +30,22 @@ that it is possible for the balance to become
 interest rate x Monthly unpaid balance)
 '''
 
-def payingdebtoffinayear(balance_num, annual_interestrate):
-    '''
-    This calculates min fixed mothly payment
-    '''
-    init_balance = balance_num
-    moninterest_rate = annual_interestrate/12
-    low_i = init_balance/12
-    up_i = (init_balance* (1+ moninterest_rate)**12)/12.0
-    epsilon = 0.03
-    balance_num = init_balance
-    while abs(balance_num) > epsilon:
-        mon_payrate = (up_i+low_i)/2
-        for i in range(12):
-            ans_i = balance_num - mon_payrate
-            balance_num = ans_i + (ans_i * moninterest_rate)
-        if balance_num > epsilon:
-            low_i = mon_payrate
-        elif balance_num < -epsilon:
-            up_i = mon_payrate
-        else:
-            break
-    return str(round(mon_payrate, 2))
+def pay_debt_year(blc_1, ann_int_rate):
+    """payingDebt Of Final Year"""
+    min_fixed_month_pay = 0
+    t_bal = blc_1
+    yr_count = 1
+    while blc_1 > 0:
+        min_fixed_month_pay += 10
+        blc_1 = t_bal
+        i = 0
+        for i in range(1, 13):
+            m_intrest_rate = ann_int_rate / 12.0
+            mnthly_unpaid_blc = blc_1 - min_fixed_month_pay
+            blc_1 = mnthly_unpaid_blc + m_intrest_rate*mnthly_unpaid_blc
+            i = i + 1
+        yr_count += 1
+    return min_fixed_month_pay
 def main():
     '''
     This prog prints min fixed monthly payment
@@ -59,6 +53,6 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Lowest Payment:", payingdebtoffinayear(data[0], data[1]))
+    print("Lowest Payment:", pay_debt_year(data[0], data[1]))
 if __name__ == "__main__":
     main()
