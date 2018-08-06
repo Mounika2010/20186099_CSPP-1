@@ -34,13 +34,12 @@ def payingdebtoffin_ayear(balance_num, annual_interestrate, monthly_paymentrate)
     '''
     calculates credit card balance after one year
     '''
-    i = 0
-    while i < 12:
-        balance_num = balance_num - (monthly_paymentrate * balance_num)
-        balance_num = balance_num - annual_interestrate / 12 * balance_num
+    for count in range(12):
+        count = count+1
+        monthly_interestrate = annual_interestrate/12.0
+        min_monthlypayment = monthly_paymentrate*balance_num
         monthly_unpaidbal = balance_num - min_monthlypayment
-        balance_num = monthly_unpaidbal + (annual_interestrate * monthly_unpaidbal)
-        i += 1
+        balance_num = monthly_unpaidbal + (monthly_interestrate * monthly_unpaidbal)
     return round(balance_num, 2)
 
 def main():
