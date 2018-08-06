@@ -30,7 +30,7 @@ of the year in the format:
 # Updated balance each month = (Monthly unpaid balance) + (Monthly interest
 rate x Monthly unpaid balance)
 '''
-def payingdebtoffin_ayear(balance_num, annual_interestrate, monthly_paymentrate):
+def payingdebtoffin_ayear(balance_num, annual_interestrate, monthly_paymentrate, min_monthlypayment):
     '''
     calculates credit card balance after one year
     '''
