@@ -7,15 +7,15 @@ and returns the factorial of given number.
 # This function takes in one number and returns one number.
 '''
 
-def fact_rec(n):
+def fact_rec(n_var):
     '''
     n is positive Integer
 
     returns: a positive integer, the factorial of n.
     '''
-    if n == 1:
+    if n_var == 1:
         return 1
-    return n * fact_rec(n-1)
+    return n_var * fact_rec(n_var-1)
     # Your code here
 
 
