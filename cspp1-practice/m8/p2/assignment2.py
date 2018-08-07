@@ -21,8 +21,8 @@ def main():
     '''
     sum of digits
     '''
-    a = input()
-    print(sumofdigits(int(a)))  
+    n = input()
+    print(sumofdigits(int(n)))  
 
 if __name__== "__main__":
     main()
