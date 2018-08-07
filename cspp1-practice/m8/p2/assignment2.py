@@ -15,7 +15,7 @@ def sumofdigits(n):
     '''
     if n == 1:
         return 1
-    return n%10 + sumofdigits((n//10)-1)
+    return n%10 + sumofdigits(n-1)
     # Your code here
 
 def main():
