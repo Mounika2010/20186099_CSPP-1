@@ -25,5 +25,5 @@ def main():
     n_inp = input()
     print(sumofdigits(int(n_inp)))
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
