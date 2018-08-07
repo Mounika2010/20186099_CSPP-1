@@ -15,9 +15,10 @@ def fact_rec(n_var):
     '''
     if n_var == 1:
         return 1
+    if n_var == 0:
+        return 0
     return n_var * fact_rec(n_var-1)
     # Your code here
-
 
 def main():
     '''
