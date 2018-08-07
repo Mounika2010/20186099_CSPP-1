@@ -13,8 +13,8 @@ def sumofdigits(n_inp):
 
     returns: a positive integer, the sum of digits of n.
     '''
-    if n_inp == 1:
-        return 1
+    if n_inp == 0:
+        return 0
     return n_inp%10 + sumofdigits(n_inp//10)
     # Your code here
 
