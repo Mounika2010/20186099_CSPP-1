@@ -7,23 +7,23 @@ and returns the sum of digits of given number.
 # This function takes in one number and returns one number.
 '''
 
-def sumofdigits(n):
+def sumofdigits(n_inp):
     '''
     n is positive Integer
 
     returns: a positive integer, the sum of digits of n.
     '''
-    if n == 1:
+    if n_inp == 1:
         return 1
-    return n%10 + sumofdigits(n//10)
+    return n_inp%10 + sumofdigits(n_inp//10)
     # Your code here
 
 def main():
     '''
     sum of digits
     '''
-    a = input()
-    print(sumofdigits(int(a)))
+    n_inp = input()
+    print(sumofdigits(int(n_inp)))
 
 if __name__== "__main__":
     main()
