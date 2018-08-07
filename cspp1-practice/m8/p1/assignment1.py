@@ -24,7 +24,7 @@ def main():
     factorial
     '''
     n_var = input()
-    print(fact_rec(int(n_var)))    
+    print(fact_rec(int(n_var)))  
 
 if __name__ == "__main__":
     main()
