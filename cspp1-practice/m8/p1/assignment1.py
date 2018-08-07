@@ -20,8 +20,11 @@ def fact_rec(n):
 
 
 def main():
-    n = input()
-    print(fact_rec(int(n)))    
+    '''
+    factorial
+    '''
+    n_var = input()
+    print(fact_rec(int(n_var)))    
 
 if __name__ == "__main__":
     main()
