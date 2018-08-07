@@ -15,8 +15,7 @@ def fact_rec(n_input):
     '''
     if n_input == 1:
         return 1
-    else:
-        return n_input * fact_rec(n_input-1)
+    return n_input * fact_rec(n_input-1)
     # Your code here
 
 def main():
