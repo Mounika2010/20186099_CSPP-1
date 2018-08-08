@@ -18,8 +18,8 @@ def get_guessed_word(secret_word, letters_guessed):
         if i not in letters_guessed:
             str_var = i + '_'
             return str_var
-        else:
-            return i
+    else:
+        return i
 
 
 
