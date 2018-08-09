@@ -19,9 +19,7 @@ def get_available_letters(letters_guessed):
     for i in check_str:
         if i not in letters_guessed:
             str_two += i
-    return str_two
-
-          
+    return str_two     
 
 
 
