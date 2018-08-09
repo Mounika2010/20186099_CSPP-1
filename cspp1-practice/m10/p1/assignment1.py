@@ -1,4 +1,5 @@
 '''
+@author : Mounika2010
 Exercise : Assignment-1
 implement the function get_available_letters that takes in one parameter -
 a list of letters, letters_guessed. This function returns a string
