@@ -18,7 +18,7 @@ def get_available_letters(letters_guessed):
     print(string.ascii_lowercase)
     for i in letters_guessed:
         if i not in letters_guessed:
-            str_two += i
+            str_two = str_one + i
     return str_two
 
             
