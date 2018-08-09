@@ -11,7 +11,7 @@ def oddTuples(aTup):
     '''
     aTup: a tuple
     
-    returns: tuple, every other element of aTup. 
+    returns: tuple, every other element of aTup.
     '''
     t= ()
     for i in range(len(aTup)):
@@ -23,6 +23,9 @@ def oddTuples(aTup):
     
 
 def main():
+    '''
+    odd tuple
+    '''
     data = input()
     data = data.split()
     aTup=()

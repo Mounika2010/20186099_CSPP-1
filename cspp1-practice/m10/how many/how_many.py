@@ -17,16 +17,17 @@ def how_many(aDict):
     
     for i in aDict.values():
         if type(i) == list or type(i) == tuple:
-            L.extend(i)
+            L.extend(list(i))
         else:
             L.append(i)
+    print(L)
     return len(L)
     
     
 
 def main():
     
-    animals = {'a': ['aardvark'], 'b': ['baboon'], 'c': ['coati']}
+    animals = {'a': ['aardvark'], 'b': ['baboon'], 'c': ('coati')}
     animals['d'] = ['donkey']
     animals['d'].append('dog')
     animals['d'].append('dingo')
