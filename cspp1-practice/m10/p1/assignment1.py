@@ -21,7 +21,7 @@ def get_available_letters(letters_guessed):
             str_two += i
     return str_two
 
-            
+          
 
 
 
