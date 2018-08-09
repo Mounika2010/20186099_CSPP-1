@@ -5,6 +5,7 @@ a list of letters, letters_guessed. This function returns a string
 that is comprised of lowercase English letters - all lowercase English letters
 that are not in letters_guessed
 '''
+import string
 
 def get_available_letters(letters_guessed):
     '''
@@ -14,9 +15,10 @@ def get_available_letters(letters_guessed):
     '''
     str_one = "abcdefghijklmnopqrstuvwxyz"
     str_two = ""
+    print(string.ascii_lowercase)
     for i in letters_guessed:
         if i not in letters_guessed:
-            str_two += 1
+            str_two = str_one + 1
     return str_two
 
             
