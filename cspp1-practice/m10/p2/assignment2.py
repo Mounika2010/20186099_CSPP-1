@@ -21,7 +21,6 @@ WORDLIST_FILENAME = "words.txt"
 def loadWords():
     """
     Returns a list of valid words. Words are strings of lowercase letters.
-    
     Depending on the size of the word list, this function may
     take a while to finish.
     """
@@ -104,11 +103,11 @@ def hangman(secretWord):
 
     * Ask the user to supply one guess (i.e. letter) per round.
 
-    * The user should receive feedback immediately after each guess 
+    * The user should receive feedback immediately after each guess
       about whether their guess appears in the computers word.
 
-    * After each round, you should also display to the user the 
-      partially guessed word so far, as well as letters that the 
+    * After each round, you should also display to the user the
+      partially guessed word so far, as well as letters that the
       user has not yet guessed.
 
     Follows the other limitations detailed in the problem write-up.

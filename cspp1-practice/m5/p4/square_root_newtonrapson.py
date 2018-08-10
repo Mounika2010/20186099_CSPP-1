@@ -13,7 +13,7 @@
 def main():
     '''
     @author : Mounika2010
-    this prigram prints the cube rooyt using newton raphson method
+    this program prints the cube root using newton raphson method
     '''
     x_i = int(input())
     epsilon = 0.01
