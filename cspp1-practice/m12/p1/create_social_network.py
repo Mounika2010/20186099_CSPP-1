@@ -35,10 +35,9 @@ def create_social_network(data):
     # remove the pass below and start writing your code
     
     d = {}
-    n = int(input())
     L = []
     for i in range(n):
-        list_input = input().split(" ")
+        # list_input = input().split(" ")
         L.extend(list_input)
     print(data(L,n))
 
