@@ -46,7 +46,7 @@ def create_social_network(data):
         if data[i] not in d:
             d[(data[i])] = data[i+1].split(",")
         else:
-            d[(data[i+1])] += data[i+1]
+            d[(data[i])] += data[i+1]
 
     return d
 
