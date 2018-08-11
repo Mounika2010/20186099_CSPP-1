@@ -40,7 +40,6 @@ def create_social_network(data):
             d[str(data[i])] = (data[i+1]).split(",")
     return d
 
-
 def main():
     '''
         handling testcase input and printing output
