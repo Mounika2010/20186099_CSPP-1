@@ -1,7 +1,7 @@
 '''
     Assignment-1 Create Social Network
 '''
-line = []
+L = []
 def create_social_network(data):
     '''
         The data argument passed to the function is a string
@@ -34,10 +34,10 @@ def create_social_network(data):
 
     # remove the pass below and start writing your code
     d = {}
-    for i in range(0,len(data),2):
-        if str(data[i]) not in d:
-            d[str(data[i])] = (data[i+1]).split("follows")
-    return d
+    for i in d:
+        if data in d[i]:
+            L.append(i)    
+    return L
 
 
 def main():
