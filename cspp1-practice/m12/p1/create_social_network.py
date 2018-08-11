@@ -36,8 +36,8 @@ def create_social_network(data):
     d = {}
     for i in d:
         if data in d[i]:
-            L.append(i)    
-    return L
+            d.append(i)    
+    return d
 
 
 def main():
