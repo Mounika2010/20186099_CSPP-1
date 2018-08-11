@@ -41,7 +41,7 @@ def create_social_network(data):
         list_input = input().split(" ")
         L.extend(list_input)
     print(data(L,n))
-main()
+
 
 
 
