@@ -35,11 +35,11 @@ def create_social_network(data):
     # remove the pass below and start writing your code
     
     d = {}
-    L = []
-    for i in range(n):
-        # list_input = input().split(" ")
-        L.extend(list_input)
-    print(data(L,n))
+    def create_dictionary(data,n):
+        for i in range(0,len(data),2):
+            if str(data[i]) not in d:
+                d[str(data[i])] = (data[i+1]).split(",")
+    return d
 
 
 
