@@ -36,9 +36,8 @@ def create_social_network(data):
     d = {}
     for i in range(0,len(data),2):
         if str(data) not in d:
-            d[str(data)[i]] = (data[i]+1).split(",")
+            d[str(data)[i]] = (data[i+1]).split(",")
     return d
-
 
 
 
@@ -47,7 +46,7 @@ def main():
         handling testcase input and printing output
     '''
     string = ''
-    lines = str(input())
+    lines = int(input())
     for i in range(lines):
         i += 1
         string += input()
