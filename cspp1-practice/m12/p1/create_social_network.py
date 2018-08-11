@@ -18,7 +18,6 @@ def create_social_network(data):
         The first word of each line is the name of the person
         The second word is follows that separates the person from the followers
         After the second word is a list of people separated by ,
-
         create_social_network function should split the string on lines
         then extract the person and the followers by splitting each line
         finally add the person and the followers to a dictionary and
@@ -36,7 +35,7 @@ def create_social_network(data):
     
     d = {}
     for i in range(0,len(data),2):
-        if str(data) in d:
+        if str(data) not in d:
             d[str(data)[i]] = str(data[i]+1).split(",")
 
     return d
