@@ -1,6 +1,6 @@
 '''
 @author : Mounika2010
-Exercise: Assignment-1              
+Exercise: Assignment-1
 The first step is to implement some code that allows us to calculate
 the score for a single word. The function get_word_score should accept as INPUT
 a string of lowercase letters (a word) and return the integer score for that word,
@@ -24,9 +24,9 @@ def get_word_score(word, n_inp):
     '''
 
     scrabble_letter_values = {
-    'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
-    'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
-    's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10}
+        'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
+        'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
+        's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10}
     b_wrd = list(word)
     score = 0
     length = len(word)
@@ -36,14 +36,14 @@ def get_word_score(word, n_inp):
     score = score * length
     if length == 7:
         return score + 50
-    else:
-        return score
+    return score
 
 def main():
     '''
     Main function for the given problem
     '''
-
+    data = input()
+    data = data.split()
     print(get_word_score(data[0], int(data[1])))
 
 
