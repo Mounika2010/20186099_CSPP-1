@@ -8,7 +8,7 @@ using the game's scoring rules.
 '''
 
 def get_word_score(word, n_inp):
-    """
+    '''
     Returns the score for a word. Assumes the word is a valid word.
 
     The score for a word is the sum of the points for letters in the
@@ -21,16 +21,16 @@ def get_word_score(word, n_inp):
     word: string (lowercase letters)
     n: integer (HAND_SIZE; i.e., hand size required for additional points)
     returns: int >= 0
-    """
+    '''
 
-    s= {
+    scrabble_letter_values = {
     'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
     'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
-    's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10 }
-    b = list(word)
+    's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10}
+    b_wrd = list(word)
     score = 0
     length = len(word)
-    for key in b:
+    for key in b_wrd:
         if key in scrabble_letter_values:
             score = score + scrabble_letter_values[key]
     score = score * length
