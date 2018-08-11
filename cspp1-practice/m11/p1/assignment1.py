@@ -23,26 +23,18 @@ def get_word_score(word, n):
     returns: int >= 0
     """
     # TO DO ... <-- Remove this comment when you code this function
-    list_1 = []
-    SCRABBLE_LETTER_VALUES = {
-    'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
-    'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
-    's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
 
-}
-    sum1 = 0
-    for key in word:
-        if key in SCRABBLE_LETTER_VALUES:
-            list_1.append(key)
-            temp = SCRABBLE_LETTER_VALUES[key]
-            sum1 = sum1 + temp
-    length = len(word)
-    temp1 = sum1 * length
-
-    if len(word) == 7:
-        temp1 = temp1 + 50
-    return temp1
-
+    sum_1 = 0
+    dictionary_ = {'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1, 'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10}
+    length_1 = len(word_1)
+    # if length_1 <= n_1:
+    for i in word_1:
+        if i in dictionary_.keys():
+            sum_1 = sum_1 + dictionary_[i]
+    sum_1 = sum_1*length_1
+    if n_1 == length_1:
+        sum_1 += 50
+    return sum_1
 
 def main():
     '''
