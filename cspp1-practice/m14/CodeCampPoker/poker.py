@@ -18,8 +18,6 @@ def is_straight(hand):
     '''
     face_value = [GLOBAL_DICT[f] for f, suit_value in hand]
     return sum(face_value) - min(face_value)*len(face_value) == 10
-   
-
 
 def is_flush(hand):
     '''
@@ -30,7 +28,7 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    return len(set([suit_value for face_value, suit_value in hand])) == 1
+    return len(set(suit_value for face_value, suit_value in hand)) == 1
 
 
 def hand_rank(hand):
@@ -59,12 +57,11 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
         return 3
-    elif is_flush(hand):
+    if is_flush(hand):
         return 2
-    elif is_straight:
+    if is_straight(hand):
         return 1
-    else:
-        return 0
+    return 0
 
 
 def poker(hands):
