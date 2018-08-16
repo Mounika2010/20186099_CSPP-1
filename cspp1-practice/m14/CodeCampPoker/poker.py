@@ -4,8 +4,7 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 GLOBAL_DICT = {
-    '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A': 14 
-    }
+    '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A': 14}
 
 def is_straight(hand):
     '''
@@ -17,7 +16,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    face_value = [GLOBAL_DICT[f] for f, s in hand]
+    face_value = [GLOBAL_DICT[f] for f, suit_value in hand]
     return sum(face_value) - min(face_value)*len(face_value) == 10
    
 
@@ -31,7 +30,7 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    return len(set([s for f, s in hand])) == 1
+    return len(set([suit_value for face_value, suit_value in hand])) == 1
 
 
 def hand_rank(hand):
@@ -58,23 +57,14 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-if four_of_kind(hand):
-        return 4
-    if three_of_kind(hand):
-        return 3
-    if one_pair(hand):
-        return 1
-    if two_pair(hand):
-        return 2
-    if full_house(hand):
-        return 7
     if is_straight(hand) and is_flush(hand):
-        return 8
-    if is_flush(hand):
-        return 6
-    if is_straight(hand):
-        return 5
-    return 0
+        return 3
+    elif is_flush(hand):
+        return 2
+    elif is_straight:
+        return 1
+    else:
+        return 0
 
 
 def poker(hands):
