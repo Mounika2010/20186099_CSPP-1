@@ -58,7 +58,7 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     face_value = [GLOBAL_DICT[f] for f, suit_value in hand]
-    return sum(face_value) - min(face_value)*len(face_value) == 10
+    return sum(face_values) - min(face_values)*len(face_values) == 10
 
 def is_flush(hand):
     '''
@@ -69,7 +69,7 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    return len(set(suit_value for face_value, suit_value in hand)) == 1
+    return len(set(suit_values for face_values, suit_values in hand)) == 1
 
 
 def hand_rank(hand):
@@ -106,7 +106,7 @@ def hand_rank(hand):
         return 5
     if is_straight(hand):
         return 4
-    if is_three_kind(hand):
+    if is_three_of_kind(hand):
         return 3
     elif is_two_pair(hand):
         return 2
