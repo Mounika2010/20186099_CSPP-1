@@ -2,7 +2,6 @@
 @author : Mounika2010
 Assignment-1 Create Social Network
 '''
-L = []
 
 def create_social_network(data):
     '''
@@ -34,16 +33,15 @@ def create_social_network(data):
     '''
 
     # remove the pass below and start writing your code
-    
-    d = {}
-    for i in range(0,len(data),2):
-        if data[i] not in d:
-            d[(data[i])] = data[i+1].split(",")
-        
+    network = {}
+    elements = data.splitlines()
+    for element in elements:
+        line = element.split(" follows ")
+        if line[0] not in network:
+            if len(line) != 1:
+                network[line[0]] = line[1].split(",")
 
-    return d
-
-
+    return network
 
 def main():
     '''
