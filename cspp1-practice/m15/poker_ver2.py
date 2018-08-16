@@ -7,43 +7,64 @@ GLOBAL_DICT = {
     '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A': 14}
 
 def get_face_values(hand):
-    face_values = [GLOBAL_DICT[f] for f, s in hand]
+    '''
+    returns face value
+    '''
+    face_values = [GLOBAL_DICT[f] for f, suit_value in hand]
     return face_values
 
 def get_suit_values(hand):
+    '''
+    returns suit values
+    '''
     suit_values = [s for f, s in hand]
     return suit_values
 
 def is_four_of_kind(hand):
+    '''
+    returns four of a kind
+    '''
     face_values = get_face_values(hand)
     face_values.sort()
     return len(set(face_values[:-1])) == 1 or len(set(face_values[-4:])) == 1
 
 
 def is_three_of_kind(hand):
+    '''
+    returns three of a kind
+    '''
     face_values = get_face_values(hand)
     face_values.sort()
     return len(set(face_values)) == 3
 
 
 def is_one_pair(hand):
+    '''
+    returns one pair
+    '''
     face_values = get_face_values(hand)
     face_values.sort()
     return len(set(face_values)) == 4
 
 
 def is_two_pair(hand):
+    '''
+    retruns two pair
+    '''
     face_values = get_face_values(hand)
     face_values.sort()
-    return len(set(face_values)) == 3 and len(set(face_values[:2])) == 1 or len(set(face_values[1:3])) == 1
+    return len(set(face_values)) == 3 and len(set(face_values[:2])) == 1
+    or len(set(face_values[1:3])) == 1
 
 
 
 def is_full_house(hand):
+    '''
+    returns full house
+    '''
     face_values = get_face_values(hand)
     face_values.sort()
     return len(set(face_values)) == 2
-
 
 
 
@@ -69,7 +90,7 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    return len(set(suit_values for face_values, suit_values in hand)) == 1
+    return len(set(s for f, s in hand)) == 1
 
 
 def hand_rank(hand):
