@@ -8,7 +8,7 @@ import math
 
 def create_dictionaries(dictionary_one, dictionary_two):
     '''
-    returns dictionary one and dict two 
+    returns dictionary one and dict two
     '''
     dictionary = {}
     for word in dictionary_one:
@@ -28,26 +28,24 @@ def calculate_similarity(dictionary):
     returns similarity
     '''
     numerator = sum([k[0] * k[1] for k in dictionary.values()])
-    dict_one = math.sqrt(sum([k[0] ** 2 for k in dictionary.values()]))
-    dict_two = math.sqrt(sum([k[1] ** 2 for k in dictionary.values()]))
-    return numerator/(dict_one*dict_two)
+    denominator_one = math.sqrt(sum([k[0] ** 2 for k in dictionary.values()]))
+    denominator_two = math.sqrt(sum([k[1] ** 2 for k in dictionary.values()]))
+    return numerator/(denominator_one*denominator_two)
 
 def create_dictionary(words_list):
     '''
-    returnns str and returns list.
+    returns str and returns list.
     '''
     dictionary = {}
     stopwords = load_stopwords("stopwords.txt")
     for word in words_list:
         word = word.strip()
-        if word not in stopwords and len(word) > 0:
+        if word not in stopwords and len(word) != 0:
             if word not in dictionary:
                 dictionary[word] = 1
             else:
                 dictionary[word] += 1
     return dictionary
-
-
 
 def clean_given_text(text_input):
     '''
@@ -65,7 +63,7 @@ def similarity(text_input_one, text_input_two):
     words_list_one = clean_given_text(text_input_one)
     words_list_one = clean_given_text(text_input_two)
     dictionary = combine_dictionaries
-    return (sorted(dictionary_two), "----", sorted(dictionary_one))
+    return (sorted(dictionary_two), "***********", sorted(dictionary_one))
 
 def load_stopwords(filename):
     '''
@@ -84,7 +82,7 @@ def main():
     input1 = input()
     input2 = input()
 
-    print(similarity(input1, input2))
+    print(calculate_similarity(input1, input2))
 
 if __name__ == '__main__':
     main()
