@@ -51,7 +51,7 @@ def create_dictionary(words_list):
 
 def clean_given_text(text_input):
     '''
-
+    removes special characters
     '''
     words = text_input.lower().strip().replace('\'', '')
     regex = re.compile('[^a-z]')
