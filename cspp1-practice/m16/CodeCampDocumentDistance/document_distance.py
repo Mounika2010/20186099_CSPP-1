@@ -8,7 +8,7 @@ import math
 
 def combine_dictionaries(dictionary_one, dictionary_two):
     '''
-    returns dictionary one and dict two
+    two dictionaries are comibined
     '''
     dictionary = {}
     for word in dictionary_one, dictionary_two:
@@ -25,22 +25,22 @@ def combine_dictionaries(dictionary_one, dictionary_two):
 
 def calculate_similarity(dictionary):
     '''
-    returns similarity
+    calculates similarity
     '''
     numerator = sum([k[0] * k[1] for k in dictionary.values()])
-    denominator_one = math.sqrt(sum([k[0] ** 2 for k in dictionary.values()]))
-    denominator_two = math.sqrt(sum([k[1] ** 2 for k in dictionary.values()]))
-    return numerator/(denominator_one*denominator_two)
+    den_one = math.sqrt(sum([k[0] ** 2 for k in dictionary.values()]))
+    den_two = math.sqrt(sum([k[1] ** 2 for k in dictionary.values()]))
+    return numerator/(den_one*den_two)
 
 def create_dictionary(words_list):
     '''
-    returns str and returns list.
+    returns dictionary takes input as word list
     '''
     dictionary = {}
     stopwords = load_stopwords("stopwords.txt")
     for word in words_list:
         word = word.strip()
-        if word not in stopwords and len(word) != 0:
+        if word not in stopwords and words_list.len(word) != 0:
             if word not in dictionary:
                 dictionary[word] = 1
             else:
@@ -62,7 +62,7 @@ def similarity(text_input_one, text_input_two):
     '''
     words_list_one = clean_given_text(text_input_one)
     words_list_one = clean_given_text(text_input_two)
-    dictionary = combine_dictionaries
+    dictionary = combine_dictionaries(dictionary_one, dictionary_two)
     return (sorted(dictionary_two), "***********", sorted(dictionary_one))
 
 def load_stopwords(filename):
@@ -70,8 +70,8 @@ def load_stopwords(filename):
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename:
-        for line in filename:
+    with open(filename, 'r') as filename_n:
+        for line in filename_n:
             stopwords[line.strip()] = 0
     return stopwords
 
