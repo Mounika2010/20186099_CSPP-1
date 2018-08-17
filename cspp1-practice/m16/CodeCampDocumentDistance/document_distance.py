@@ -10,7 +10,7 @@ def create_dictionaries(dictionary_one, dictionary_two):
     dictionary = {}
     for word in dictionary_one:
         if word in dictionary_two:
-        dictionary[word] = [dictionary_one[word], dictionary_two[word]]
+            dictionary[word] = [dictionary_one[word], dictionary_two[word]]
     for word in dictionary_one:
         if word not in dictionary:
             dictionary[word] = [dictionary_one[word], 0]
