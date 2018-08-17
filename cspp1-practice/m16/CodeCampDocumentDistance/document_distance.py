@@ -6,7 +6,7 @@
 import re
 import math
 
-def create_dictionaries(dictionary_one, dictionary_two)
+def create_dictionaries(dictionary_one, dictionary_two):
     dictionary = {}
     for word in dictionary_one:
         if word in dictionary_two:
