@@ -15,8 +15,8 @@ d['m'] = 5
 print(d)
 0
 
-
-
+def create_social_net(data):
+	
 
 
 

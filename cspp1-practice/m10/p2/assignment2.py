@@ -96,7 +96,7 @@ def hangman(secretWord):
     '''
     secretWord: string, the secret word to guess.
 
-    Starts up an interactive game of Hangman.
+    Starts up an interactive game of Hangman.                                                                   `   
 
     * At the start of the game, let the user know how many 
       letters the secretWord contains.
