@@ -11,7 +11,7 @@ def combine_dictionaries(dictionary_one, dictionary_two):
     two dictionaries are comibined
     '''
     dictionary = {}
-    for word in dictionary_one, dictionary_two:
+    for word in dictionary_one:
         if word in dictionary_two:
             dictionary[word] = [dictionary_one[word], dictionary_two[word]]
     for word in dictionary_one:
@@ -23,13 +23,13 @@ def combine_dictionaries(dictionary_one, dictionary_two):
     return dictionary
 
 
-def calculate_similarity(dictionary):
+def calculate_similarity(dictionary_values):
     '''
     calculates similarity
     '''
-    numerator = sum([k[0] * k[1] for k in dictionary.values()])
-    den_one = math.sqrt(sum([k[0] ** 2 for k in dictionary.values()]))
-    den_two = math.sqrt(sum([k[1] ** 2 for k in dictionary.values()]))
+    numerator = sum([k[0] * k[1] for k in dictionary_values.values()])
+    den_one = math.sqrt(sum([k[0] ** 2 for k in dictionary_values.values()]))
+    den_two = math.sqrt(sum([k[1] ** 2 for k in dictionary_values.values()]))
     return numerator/(den_one*den_two)
 
 def create_dictionary(words_list):
@@ -40,7 +40,7 @@ def create_dictionary(words_list):
     stopwords = load_stopwords("stopwords.txt")
     for word in words_list:
         word = word.strip()
-        if word not in stopwords and len(word) != 0:
+        if word not in stopwords and len(word) > 0:
             if word not in dictionary:
                 dictionary[word] = 1
             else:
