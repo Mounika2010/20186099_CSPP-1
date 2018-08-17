@@ -7,6 +7,9 @@ import re
 import math
 
 def create_dictionaries(dictionary_one, dictionary_two):
+    '''
+    returns dictionary one and dict two 
+    '''
     dictionary = {}
     for word in dictionary_one:
         if word in dictionary_two:
@@ -21,6 +24,9 @@ def create_dictionaries(dictionary_one, dictionary_two):
 
 
 def calculate_similarity(dictionary):
+    '''
+    returns similarity
+    '''
     numerator = sum([k[0] * k[1] for k in dictionary.values()])
     d1 = math.sqrt(sum([k[0] ** 2 for k in dictionary.values()]))
     d2 = math.sqrt(sum([k[1] ** 2 for k in dictionary.values()]))
