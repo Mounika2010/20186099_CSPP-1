@@ -60,8 +60,8 @@ def similarity(text_input_one, text_input_two):
     '''
         Compute the document distance as given in the PDF
     '''
-    words_list_one = create_dictionary(clean_given_text(text_input_one))
-    words_list_one = create_dictionary(clean_given_text(text_input_two))
+    dictionary_one = create_dictionary(clean_given_text(text_input_one))
+    dictionary_two = create_dictionary(clean_given_text(text_input_two))
     dictionary = combine_dictionaries(dictionary_one, dictionary_two)
     return (sorted(dictionary_two), "***********", sorted(dictionary_one))
 
