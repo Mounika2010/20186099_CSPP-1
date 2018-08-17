@@ -8,7 +8,8 @@ import math
 
 def crate_dictionaries(dictionary_one, dictionary_two)
     dictionary = {}
-    for word in dictionary_one, dictionary_two:
+    for word in dictionary_one:
+        if word in dictionary_two:
         dictionary[word] = [dictionary_one[word], dictionary_two[word]]
     for word in dictionary_one:
         if word not in dictionary:
@@ -32,7 +33,7 @@ def create_dictionary(words_list):
     dictionary = {}
     stopwords = load_stopwords("stopwords.txt")
     for word in words_list:
-        word = word.strimport re
+        word = word.strip()
         if word not in stopwords and len(word) > 0:
             if word not in dictionary:
                 dictionary[word] = 1
