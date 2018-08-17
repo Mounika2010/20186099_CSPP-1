@@ -40,7 +40,7 @@ def create_dictionary(words_list):
     stopwords = load_stopwords("stopwords.txt")
     for word in words_list:
         word = word.strip()
-        if word not in stopwords and words_list.len(word) != 0:
+        if word not in stopwords and len(word) != 0:
             if word not in dictionary:
                 dictionary[word] = 1
             else:
@@ -60,8 +60,8 @@ def similarity(text_input_one, text_input_two):
     '''
         Compute the document distance as given in the PDF
     '''
-    words_list_one = clean_given_text(text_input_one)
-    words_list_one = clean_given_text(text_input_two)
+    words_list_one = create_dictionary(clean_given_text(text_input_one))
+    words_list_one = create_dictionary(clean_given_text(text_input_two))
     dictionary = combine_dictionaries(dictionary_one, dictionary_two)
     return (sorted(dictionary_two), "***********", sorted(dictionary_one))
 

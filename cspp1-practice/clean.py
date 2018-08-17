@@ -16,4 +16,4 @@ for k in d:
 		d_reverse[d[k]].append(k)
 	else:
 		d_reverse[d[k]].append(k)
-print(d_reverse)
+print(d)
