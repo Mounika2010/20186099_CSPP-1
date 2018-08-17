@@ -28,9 +28,9 @@ def calculate_similarity(dictionary):
     returns similarity
     '''
     numerator = sum([k[0] * k[1] for k in dictionary.values()])
-    d1 = math.sqrt(sum([k[0] ** 2 for k in dictionary.values()]))
-    d2 = math.sqrt(sum([k[1] ** 2 for k in dictionary.values()]))
-    return numerator/(d1*d2)
+    dict_one = math.sqrt(sum([k[0] ** 2 for k in dictionary.values()]))
+    dict_two = math.sqrt(sum([k[1] ** 2 for k in dictionary.values()]))
+    return numerator/(dict_one*dict_two)
 
 def create_dictionary(words_list):
     '''
