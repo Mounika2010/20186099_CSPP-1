@@ -6,12 +6,12 @@
 import re
 import math
 
-def create_dictionaries(dictionary_one, dictionary_two):
+def combine_dictionaries(dictionary_one, dictionary_two):
     '''
     returns dictionary one and dict two
     '''
     dictionary = {}
-    for word in dictionary_one:
+    for word in dictionary_one, dictionary_two:
         if word in dictionary_two:
             dictionary[word] = [dictionary_one[word], dictionary_two[word]]
     for word in dictionary_one:
