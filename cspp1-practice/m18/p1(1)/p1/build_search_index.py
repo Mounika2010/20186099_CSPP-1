@@ -60,13 +60,14 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    docs = {}
-    stopwords = load_stopwords("stopwords.txt")
-    for i in docs:
-        for j in range(len(docs[i])):
-            if docs[i][j][0] == stopwords:
-                print(docs[i][j][0])
-    return docs
+    doc_id = {}
+    for i in doc_id:
+        for j in range(len(docs[i]))
+            if doc_id[i][j][0] == word_list:
+                print(doc_id[i][j][0])
+    return doc_id
+
+
 
 # helper function to print the search index
 # use this to verify how the search index looks
