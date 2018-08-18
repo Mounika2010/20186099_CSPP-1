@@ -20,7 +20,8 @@
         .
     }
 '''
-
+import re
+l = []
 # helper function to load the stop words from a file
 def load_stopwords(filename):
     '''
@@ -60,7 +61,19 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    pass
+    d = {}
+    stopwords = load_stopwords("stopwords.txt")
+    for word in word_list:
+        word = word.strip()
+        if word not in stopwords and len(word) > 0:
+            if word not in d:
+                d[word] = 1
+            else:
+                d[word] += 1
+    return d
+    
+    
+
 
 # helper function to print the search index
 # use this to verify how the search index looks
