@@ -64,7 +64,7 @@ def build_search_index(docs):
     stopwords = load_stopwords("stopwords.txt")
     for i in docs:
         for j in range(len(docs[i])):
-            if(docs[i][j][0] == stopwords):
+            if docs[i][j][0] == stopwords:
                 print(docs[i][j][0])
     return docs
     print(docs)
