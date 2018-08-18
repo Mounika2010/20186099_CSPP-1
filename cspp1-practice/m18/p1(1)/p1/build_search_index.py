@@ -62,14 +62,14 @@ def build_search_index(docs):
 
     # return search index
     d = {}
-    stopwords = load_stopwords("stopwords.txt")
+    stopwords = load_stopwords("stopword.txt")
     for word in word_list:
         word = word.strip()
         if word not in stopwords and len(word) > 0:
             if word not in d:
                 d[word] = 1
             else:
-                d[word] += 1
+                d[word] +=1
     return d
     
     
