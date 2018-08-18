@@ -68,7 +68,7 @@ def build_search_index(docs):
         for word in word_l:
             if word not in dictionary.keys():
                 dictionary[word] = [(i, word_l.count(word)) for i,
-                word in enumerate(word_l) if word in word_l]
+                                    word in enumerate(word_l) if word in word_l]
     return dictionary
 
 
