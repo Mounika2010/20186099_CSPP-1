@@ -60,12 +60,15 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    doc_id = {}
-    for i in doc_id:
-        for j in range(len(docs[i]))
-            if doc_id[i][j][0] == word_list:
-                print(doc_id[i][j][0])
-    return doc_id
+    dictionary = {}
+    word_l = []
+    for line in docs:
+        word_l.append(word_list(line))
+        for word in word_l:
+            if word not in dictionary.keys():
+                dictionary[word] = [i, word.count(word) for i, word in enumerate(word_l) if word in word_l]
+    return dictionary
+
 
 
 
