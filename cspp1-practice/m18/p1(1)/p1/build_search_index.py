@@ -68,11 +68,6 @@ def build_search_index(docs):
                 print(search_index[i][j][0])
     return search_index
 
-    doc_id = []
-    doc_id = tuple(i)
-    for i in words:
-        doc_id.append(index())
-
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):
