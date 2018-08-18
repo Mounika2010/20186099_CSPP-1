@@ -21,7 +21,6 @@
     }
 '''
 import re
-l = []
 # helper function to load the stop words from a file
 def load_stopwords(filename):
     '''
@@ -61,14 +60,14 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    index = {}
+    docs = {}
     stopwords = load_stopwords("stopwords.txt")
-    for i in index:
-        for j in range(len(index[i])):
-            if(index[i][j][0] == stopwords):
-                print(index[i][j][0])
-    return index
-
+    for i in docs:
+        for j in range(len(docs[i])):
+            if(docs[i][j][0] == stopwords):
+                print(docs[i][j][0])
+    return docs
+    print(docs)
 
 # helper function to print the search index
 # use this to verify how the search index looks
