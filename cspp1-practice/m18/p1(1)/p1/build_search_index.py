@@ -67,8 +67,7 @@ def build_search_index(docs):
         for j in range(len(d[i])):
             if(d[i][j][0] == stopwords):
                 print(d[i][j][0])
-            else:
-                return d
+    return d
 
 
 # helper function to print the search index
