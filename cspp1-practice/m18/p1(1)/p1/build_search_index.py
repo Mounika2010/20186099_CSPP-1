@@ -1,4 +1,5 @@
 '''
+@author : Mounika2010
     Tiny Search Engine - Part 1 - Build a search index
 
     In this programming assingment you are given with some text documents as input.
@@ -66,7 +67,8 @@ def build_search_index(docs):
         word_l.append(word_list(line))
         for word in word_l:
             if word not in dictionary.keys():
-                dictionary[word] = [(i, word_l.count(word)) for i, word in enumerate(word_l) if word in word_l]
+                dictionary[word] = [(i, word_l.count(word)) for i,
+                word in enumerate(word_l) if word in word_l]
     return dictionary
 
 
