@@ -1,5 +1,5 @@
 '''
------------
+@author : Mounika2010
 User Instructions
 
 Modify the hand_rank function so that it returns the
@@ -36,20 +36,20 @@ def hand_rank(hand):
     '''
     return_value = None
     ranks = card_ranks(hand)
-    if straight(ranks) and flush(hand):            # straight flush
+    if is_straight(ranks) and is_flush(hand):            # straight flush
         return_value = (8, max(ranks))
     elif kind(4, ranks):                           # 4 of a kind
         return_value = (7, kind(4, ranks), kind(1, ranks))
     elif kind(3, ranks) and kind(2, ranks):        # full house
         return_value = (6, kind(3, ranks), kind(2, ranks))
-    elif flush(hand):                              # flush
+    elif is_flush(hand):                              # flush
         return_value = (5, ranks)
-    elif straight(ranks):                          # straight
+    elif is_straight(ranks):                          # straight
         return_value = (4, max(ranks))
     elif kind(3, ranks):                           # 3 of a kind
         return_value = (3, kind(3, ranks), ranks)
-    elif two_pair(ranks):                          # 2 pair
-        return_value = (2, two_pair(ranks), ranks)
+    elif is_two_pair(ranks):                          # 2 pair
+        return_value = (2, is_two_pair(ranks), ranks)
     elif kind(2, ranks):                           # kind
         return_value = (1, kind(2, ranks), ranks)
     else:                                          # high card
@@ -64,13 +64,13 @@ def card_ranks(cards):
     ranks.sort(reverse=True)
     return ranks
 
-def straight(ranks):
+def is_straight(ranks):
     '''
     Return True if the ordered ranks from a 5-card straight
     '''
     return (max(ranks)-min(ranks) == 4) and len(set(ranks)) == 5
 
-def flush(hand):
+def is_flush(hand):
     '''
     Return True if all the cards have the same suit
     '''
@@ -86,7 +86,7 @@ def kind(count, ranks):
             return rank
     return None
 
-def two_pair(ranks):
+def is_two_pair(ranks):
     '''
     Return a list of the ranks for two pairs.
     '''
