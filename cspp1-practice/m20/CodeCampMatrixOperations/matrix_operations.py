@@ -13,7 +13,7 @@ def mult_matrix(m1, m2):
 def generate_resultant_matrix(rows, columns):
 
 	add_matrix = [[0] * columns] * rows
-    return add_matrix
+   	return add_matrix
 
 def add_matrix(m1, m2):
     '''
@@ -32,7 +32,7 @@ def add_matrix(m1, m2):
         for j in range(len(columns[0])):
             row.append(a[i][j]+b[i][j])
         res.append(row)
-    return res
+    return add_matrix
 
     	
 
