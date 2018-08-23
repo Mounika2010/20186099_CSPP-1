@@ -11,9 +11,8 @@ def mult_matrix(m1, m2):
     mult_matrix = generate_resultant_matrix(rows, columns)
 
 def generate_resultant_matrix(rows, columns):
-
 	add_matrix = [[0] * columns] * rows
-   	return add_matrix
+	return add_matrix
 
 def add_matrix(m1, m2):
     '''
