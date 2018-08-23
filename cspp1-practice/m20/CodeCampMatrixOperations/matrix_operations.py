@@ -24,7 +24,7 @@ def add_matrix(m1, m2):
     '''
     rows = len(matrix_one)
     columns = len(matrix_one[0])
-    add_matrix = generate_resultant_matrix(rows, coloumns)
+    add_matrix = generate_resultant_matrix(rows, columns)
     res = []
     for i in range(len(rows)):
         row = []
