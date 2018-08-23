@@ -80,7 +80,7 @@ def read_matrix():
 		if columns == len(list_matrix_row):
 			matrix.append([int(i) for i in list_matrix_row])
 		else:
-			print("Error: Invalid input for thr matrix")
+			print("Error: Invalid input for the matrix")
 			return None
 	return matrix
 
