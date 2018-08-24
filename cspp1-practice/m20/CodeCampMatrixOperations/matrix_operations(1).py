@@ -1,6 +1,6 @@
 '''
 To find addition and multiplication of the given matrices
-@author : Mounika2010
+@author : Rohithmarktricks
 '''
 
 def generate_resultant_matrix(rows, columns):
@@ -9,7 +9,7 @@ def generate_resultant_matrix(rows, columns):
     '''
     # res_matrix = [[0]*columns]*rows
     # return res_matrix
-    return [[0 for i in range(cols)] for j in range(rows)]
+    return [[0 for i in range(columns)] for j in range(rows)]
 
 def mult_matrix(matrix_1, matrix_2):
     '''
@@ -22,11 +22,8 @@ def mult_matrix(matrix_1, matrix_2):
     #rows = len(matrix_1)
     #columns = len(matrix_2[0])
     #multi_matrix = generate_resultant_matrix(rows, columns)
-    #zip(*s) unzips the [[],[],[]] to [],[],[]
-    #zip([], X_row) = (0,0),(1,1),(2,2)
-    # final answer needed is 0*0+1*1+2*2, we have used sum for the same.
     if len(matrix_1[0]) == len(matrix_2):
-        return [[sum(a*b for a, b in zip(X_row, Y_column))for Y_column in zip(*matrix_2)] for X_row in matrix_1]
+        return [[sum(a*b for a, b in zip(X_row, Y_col))for Y_col in zip(*matrix_2)] for X_row in matrix_1]
     else:
         print("Error: Matrix shapes invalid for mult")
         return None
@@ -40,11 +37,11 @@ def add_matrix(matrix_1, matrix_2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     rows = len(matrix_1)
-    cols = len(matrix_1[0])
-    add_matrices = generate_resultant_matrix(rows, cols)																				
+    columns = len(matrix_1[0])
+    add_matrices = generate_resultant_matrix(rows, columns)
     if len(matrix_1) == len(matrix_2) and len(matrix_1[0]) == len(matrix_2[0]):
         for i in range(rows):
-            for j in range(cols):
+            for j in range(columns):
                 add_matrices[i][j] = matrix_1[i][j] + matrix_2[i][j]
         return add_matrices
     else:
@@ -61,10 +58,10 @@ def read_matrix():
     '''
     matrix = []
     list_input = input().split(",")
-    rows, cols = int(list_input[0]), int(list_input[1])
+    rows, columns = int(list_input[0]), int(list_input[1])
     for _ in range(rows):
         list_matrix_row = input().split()
-        if cols == len(list_matrix_row):
+        if columns == len(list_matrix_row):
             matrix.append([int(i) for i in list_matrix_row])
         else:
             print("Error: Invalid input for the matrix")
