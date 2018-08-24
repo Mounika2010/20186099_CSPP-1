@@ -11,8 +11,12 @@ def mult_matrix(m1, m2):
     mult_matrix = generate_resultant_matrix(rows, columns)
 
 def generate_resultant_matrix(rows, columns):
-	add_matrix = [[0] * columns] * rows
-	return add_matrix
+
+	add_matrix = []
+	for j in range(rows):
+		add_matrix.append([])
+		for i in range(columns)
+		add_matrix 
 
 def add_matrix(m1, m2):
     '''
@@ -26,16 +30,10 @@ def add_matrix(m1, m2):
     columns = len(matrix_one[0])
     add_matrix = generate_resultant_matrix(rows, columns)
     res = []
-    for i in range(len(rows)):
-        row = []
-        for j in range(len(columns[0])):
-            row.append(rows[i][j] + columns[i][j])
-        res.append(row)
+    for i in range(rows):
+        for j in range(columns):
+            row.append(m1[i][j] + m2[i][j])
     return add_matrix
-
-    	
-
-
  
 #in python initilization is needed before indexing.
     matrix1=[[0 for j in range(0,n)] for i in range(0,m)]   # matrix 1 initialization with 0s
@@ -45,7 +43,7 @@ def add_matrix(m1, m2):
     for i in range(0,m):
         for j in range(0,n):
             matrix1[i][j]= int(input("enter an element"))
-    print("enter second matrix elements ")    
+    print("enter second matrix elements")
     for i in range(0,m):
         for j in range(0,n):
             matrix2[i][j]=int(input("enter an element"))
