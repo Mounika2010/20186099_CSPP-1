@@ -7,7 +7,7 @@ def main():
 	text = input()
 	lines = ""
 	for i in range(text):
-    	lines += input()+ "\n"
+    	lines += input() + "\n"
 
 print lines	
 
