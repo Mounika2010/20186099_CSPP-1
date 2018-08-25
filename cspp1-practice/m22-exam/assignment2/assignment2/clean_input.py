@@ -7,7 +7,7 @@ def clean_string(string):
 	'''
 	clean the given string
 	'''
-    words = string.lower().strip().replace('\'', '')
+    words = string.lower().strip().replace('\'','')
     regex = re.compile('[^a-z]')
     words = regex.sub("", words)
     return words
