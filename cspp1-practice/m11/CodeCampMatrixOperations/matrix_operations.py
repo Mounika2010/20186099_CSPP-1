@@ -1,6 +1,6 @@
 '''
 To find addition and multiplication of the given matrices
-@author : Rohithmarktricks
+@author : Mounika2010
 '''
 
 def generate_resultant_matrix(rows, columns):
