@@ -21,10 +21,6 @@ def check_sudoku(sudoku):
 
 
 
-
-
-
-
 def main():
     '''
         main function to read input sudoku from console
