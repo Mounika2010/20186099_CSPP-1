@@ -14,7 +14,7 @@ lines = ""
 for i in xrange(5):
     lines+=input()+"\n"
 
-print lines
+print(lines)
 
 # print(lines) 
 
