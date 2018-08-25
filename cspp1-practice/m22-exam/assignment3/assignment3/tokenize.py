@@ -7,16 +7,11 @@ def tokenize(string):
     '''
     tokenize
     '''
-    # dictionary = {}
-    # for word in string:
-    #     if word not in dictionary:
-    #         dictionary[word] = [string.count(word)]
-    # return dictionary  
-    string = string.lower().split()
     dictionary = {}
     for word in string:
-        dictionary[word] = word.count(word)
-    print(dictionary)   
+        if word not in dictionary:
+            dictionary[word] = [string.count(word)]
+    return dictionary    
 def main():
     '''
     tokenize the string
