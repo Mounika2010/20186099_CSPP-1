@@ -10,7 +10,7 @@ def tokenize(string):
     dictionary = {}
     for word in string:
         if word not in dictionary:
-            dictionary[letter] = [string.count(word)]
+            dictionary[word] = [string.count(word)]
     return dictionary      
 def main():
     '''
