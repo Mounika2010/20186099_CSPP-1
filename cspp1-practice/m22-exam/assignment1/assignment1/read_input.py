@@ -11,7 +11,7 @@ def main():
     # return text
     no_of_lines = input()
 lines = ""
-for i in xrange(5):
+for i in range(5):
     lines+=input()+"\n"
 
 print(lines)
