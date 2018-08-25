@@ -22,7 +22,7 @@ def input_validation(matrix):
             if j not in 'x.o':
                 return False
     return True
-def 
+
 
 def invalid_game(matrix):
 
@@ -30,9 +30,15 @@ def invalid_game(matrix):
         return False
 def valid_rules_are_followed(matrix):
 
-    x+count = 0
     x_count = 0
-    for RRADADMEM
+    x_count = 0
+    for row in matrix:
+        x_count += row.count('x')
+        o_count += row.count('o')
+
+    if o_count > 5 or x_count > 5:
+        
+
 
 
 def read_mx():
