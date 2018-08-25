@@ -5,7 +5,7 @@ each word
 
 def tokenize(string):
 	dictionary = {}
-    for letter in string:
+	for letter in string:
     	if letter not in dictionary:
     		dictionary[letter] = string.count(letter)
             
