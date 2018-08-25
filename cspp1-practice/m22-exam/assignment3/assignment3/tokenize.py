@@ -11,7 +11,7 @@ def tokenize(string):
     for letter in string:
         if letter not in dictionary:
             dictionary[letter] = [string.count(letter)]
-            
+    return dictionary      
 def main():
     '''
     tokenize the string
