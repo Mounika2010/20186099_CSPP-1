@@ -13,13 +13,25 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    list_input = input().split(",")
-    rows, columns = int(list_input[0]), int(list_input[1])
-    for _ in range(rows):
-        list_matrix_row = input().split()
-        if columns == len(list_matrix_row):
-            sudoku.append([int(i) for i in list_matrix_row])
-
+    if len(grid) == 9:
+    numsinrow = 0
+    for i in range(9):
+        if len(grid[i]) == 9:
+            numsinrow += 1
+    if numsinrow == 9:
+        for i in range(9):
+            rowoccurence = [0,0,0,0,0,0,0,0,0,0]
+            for j in range(9):
+                rowoccurence[grid[i][j]] += 1
+                temprow = rowoccurence[1:10]
+                if temprow == [1,1,1,1,1,1,1,1,1]:
+                    return True
+                else:
+                    return False
+    else:
+        return False
+else:
+    return False
 
 def main():
     '''
