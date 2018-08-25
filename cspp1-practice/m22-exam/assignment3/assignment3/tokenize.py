@@ -8,9 +8,9 @@ def tokenize(string):
     tokenize
     '''
     dictionary = {}
-    for letter in string:
-        if letter not in dictionary:
-            dictionary[letter] = [string.count(letter)]
+    for word in string:
+        if word not in dictionary:
+            dictionary[letter] = [string.count(word)]
     return dictionary      
 def main():
     '''
