@@ -8,6 +8,7 @@ def main():
     lines = ""
     for i in range(text):
         lines += text + "\n"
+    return text
 
 print(lines) 
 
