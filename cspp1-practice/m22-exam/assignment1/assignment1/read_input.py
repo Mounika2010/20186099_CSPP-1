@@ -9,7 +9,7 @@ def main():
     for i in range(text):
         lines += input() + "\n"
 
-print lines 
+print(lines) 
 
 if __name__ == '__main__':
     main()
