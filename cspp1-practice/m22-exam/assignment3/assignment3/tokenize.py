@@ -4,10 +4,13 @@ each word
 '''
 
 def tokenize(string):
-    pass
+	dictionary = {}
+    for letter in string:
+    	if letter not in dictionary:
+    		dictionary[letter] = string.count(letter)
             
 def main():
-    pass
+    text = input()
 
 if __name__ == '__main__':
     main()
