@@ -6,7 +6,6 @@ import re
 def clean_string(string):
     words = string.lower().strip().replace('\'', '')
     regex = re.compile('[^a-z]')
-    words = regex.sub(" ", words).split(" ")
     return words
 def main():
     string = input()
