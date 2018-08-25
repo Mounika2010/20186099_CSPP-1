@@ -9,12 +9,11 @@ def main():
     # for i in range(text):
     #     lines += text + "\n"
     # return text
-    no_of_lines = input()
-lines = ""
-for i in range(5):
-    lines+=input()+"\n"
+    text = input()
+    input_lines = input().splitlines()
+    print(text)
 
-print(lines)
+
 
 # print(lines) 
 
