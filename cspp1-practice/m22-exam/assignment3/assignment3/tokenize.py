@@ -10,7 +10,7 @@ def tokenize(string):
     		dictionary[letter] = string.count(letter)
             
 def main():
-    text = input()
+    string = input()
 
 if __name__ == '__main__':
     main()
