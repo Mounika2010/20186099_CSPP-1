@@ -8,7 +8,7 @@ def main():
 	no_of_lines = 5
 	lines = ""
 	for i in range(5):
-    	lines += input()+"\n"
+    	lines += input()+ "\n"
 
 print lines	
 
