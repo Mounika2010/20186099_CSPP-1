@@ -13,18 +13,11 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    list_input = input().split(",")
-    rows, columns = int(list_input[0]), int(list_input[1])
-    for _ in range(rows):
-        list_matrix_row = input().split()
-        if columns == len(list_matrix_row):
-            sudoku.append([int(i) for i in list_matrix_row])
-    len_rows = 0
-    len_cols = 0
-    for row in sudoku:
-        if len(rows) == 9 and len(columns) == 9:
-            return True
-        return
+    for row in matrix:
+        for element in row:
+            if element not in '123456789':
+                return False
+    return True
 
 
 
