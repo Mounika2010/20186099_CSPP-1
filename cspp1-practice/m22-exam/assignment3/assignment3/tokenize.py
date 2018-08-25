@@ -17,7 +17,7 @@ def main():
     tokenize the string
     '''
     string = input()
-    print(tokenize(string()))
+    print(tokenize())
 
 if __name__ == '__main__':
     main()
